@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
--- vim.g.mapleader = " "
+vim.g.mapleader = " "
 
 -- unset highlight
 map("n", "<Esc>", ":nohl<CR>")

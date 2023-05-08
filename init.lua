@@ -21,7 +21,6 @@ require("util")
 require("config.keymaps")
 require("config.autocmds")
 require("config.options")
-require("core")
 require("lazy").setup("plugins")
 
 -- colorscheme
@@ -29,8 +28,3 @@ vim.cmd([[colorscheme catppuccin]])
 
 -- format on save
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
-
-local config = require("core.default_config").ui
-vim.opt.statusline = "%!v:lua.require('ui.statusline." .. config.statusline.theme .. "').run()"
-
-dofile(vim.g.base46_cache .. "defaults")

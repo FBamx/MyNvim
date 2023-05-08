@@ -69,5 +69,24 @@ map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
 -- lazygit
-map("n", "<leader>gg", function() Util.float_term({ "lazygit" }, { cwd = Util.get_root(), esc_esc = false }) end, { desc = "Lazygit (root dir)" })
-map("n", "<leader>gG", function() Util.float_term({ "lazygit" }, {esc_esc = false}) end, { desc = "Lazygit (cwd)" })
+map("n", "<leader>gg", function()
+	Util.float_term({ "lazygit" }, { cwd = Util.get_root(), esc_esc = false })
+end, { desc = "Lazygit (root dir)" })
+map("n", "<leader>gG", function()
+	Util.float_term({ "lazygit" }, { esc_esc = false })
+end, { desc = "Lazygit (cwd)" })
+
+local format = function()
+	require("util").format({ force = true })
+end
+-- lsp
+map("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto Definition" })
+map("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "References" })
+map("n", "gy", "<cmd>Telescope lsp_type_definitions<cr>", { desc = "Goto T[y]pe Definition" })
+map("n", "gD", vim.lsp.buf.declaration, { desc = "Goto Declaration" })
+map("n", "gI", "<cmd>Telescope lsp_implementations<cr>", { desc = "Goto Implementation" })
+map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+map("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
+map("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
+map("n", "<leader>cf", format, { desc = "documentFormatting" })
+map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })

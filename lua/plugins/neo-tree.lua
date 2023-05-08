@@ -63,6 +63,7 @@ return {
 		},
 		config = function(_, opts)
 			require("neo-tree").setup(opts)
+      vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { fg = "#4B4453", bg = "#EABDFF" })
 			vim.api.nvim_create_autocmd("TermClose", {
 				pattern = "*lazygit",
 				callback = function()

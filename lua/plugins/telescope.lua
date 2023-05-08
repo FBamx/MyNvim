@@ -79,6 +79,7 @@ return {
 			{ "<leader>ff", Util.telescope("files"), desc = "Find Files (root dir)" },
 			{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
 			{ "<leader>fy", "<Cmd>Telescope neoclip<CR>", desc = "neoclip" },
+			{ "<leader>sg", Util.telescope("live_grep"), desc = "Grep (root dir)" },
 			{ "<leader>mo", "<Cmd>Telescope emoji<CR>", desc = "emoji" },
 			{ "<leader>nv", "<Cmd>Telescope env<CR>", desc = "env" },
 			{ "<leader>po", "<Cmd>Telescope ports<CR>", desc = "ports" },

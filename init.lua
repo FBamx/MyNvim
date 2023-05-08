@@ -1,11 +1,11 @@
 local echo = function(str)
-  vim.cmd "redraw"
+  vim.cmd("redraw")
   vim.api.nvim_echo({ { str, "Bold" } }, true, {})
 end
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  echo "  Installing lazy.nvim & plugins ..."
+  echo("  Installing lazy.nvim & plugins ...")
   vim.fn.system({
     "git",
     "clone",
@@ -27,4 +27,4 @@ require("lazy").setup("plugins")
 vim.cmd([[colorscheme catppuccin]])
 
 -- format on save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])

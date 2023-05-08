@@ -6,6 +6,9 @@ vim.g.mapleader = " "
 -- unset highlight
 map("n", "<Esc>", ":nohl<CR>")
 
+-- lazy
+map("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy" })
+
 -- local history
 map("n", "<A-h>", ":LocalHistoryToggle<CR>")
 

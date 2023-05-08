@@ -1,5 +1,5 @@
 local fn = vim.fn
-local config = require("core.utils").load_config().ui.statusline
+local config = require("core.default_config").ui.statusline
 local sep_style = config.separator_style
 
 local default_sep_icons = {
@@ -178,7 +178,7 @@ M.cursor_position = function()
 end
 
 M.run = function()
-	local modules = require("nvchad_ui.statusline.default")
+	local modules = require("ui.statusline.default")
 
 	if config.overriden_modules then
 		modules = vim.tbl_deep_extend("force", modules, config.overriden_modules())

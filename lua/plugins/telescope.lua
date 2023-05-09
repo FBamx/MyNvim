@@ -8,7 +8,6 @@ return {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-project.nvim" },
       { "debugloop/telescope-undo.nvim" },
-      -- { "AckslD/nvim-neoclip.lua" },
       { "xiyaowong/telescope-emoji.nvim" },
       { "LinArcX/telescope-env.nvim" },
       { "LinArcX/telescope-ports.nvim" },
@@ -78,7 +77,6 @@ return {
       { "<leader><space>", Util.telescope("files"),                        desc = "Find Files (root dir)" },
       { "<leader>ff",      Util.telescope("files"),                        desc = "Find Files (root dir)" },
       { "<leader>fr",      "<cmd>Telescope oldfiles<cr>",                  desc = "Recent" },
-      -- { "<leader>fy", "<Cmd>Telescope neoclip<CR>", desc = "neoclip" },
       { "<leader>sg",      Util.telescope("live_grep"),                    desc = "Grep (root dir)" },
       { "<leader>mo",      "<Cmd>Telescope emoji<CR>",                     desc = "emoji" },
       { "<leader>nv",      "<Cmd>Telescope env<CR>",                       desc = "env" },
@@ -86,13 +84,11 @@ return {
     },
     config = function(_, opts)
       local telescope = require("telescope")
-      -- require("neoclip").setup()
       telescope.setup(opts)
       -- telescope.load_extension("dap")
       telescope.load_extension("fzf")
       telescope.load_extension("project")
       telescope.load_extension("undo")
-      -- telescope.load_extension("neoclip")
       telescope.load_extension("emoji")
       telescope.load_extension("env")
       telescope.load_extension("ports")
@@ -108,7 +104,6 @@ return {
         "AckslD/nvim-neoclip.lua",
         lazy = false,
         opts = {},
-        -- event = "VeryLazy",
         config = function(_, opts)
           require("neoclip").setup(opts)
           require("telescope").load_extension("neoclip")

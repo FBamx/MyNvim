@@ -2,7 +2,6 @@ local echo = function(str)
   vim.cmd("redraw")
   vim.api.nvim_echo({ { str, "Bold" } }, true, {})
 end
--- test
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   echo("  Installing lazy.nvim & plugins ...")

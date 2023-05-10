@@ -41,15 +41,18 @@ return {
 		end,
 		opts = {
 			filesystem = {
-				bind_to_cwd = false,
+				-- bind_to_cwd = false,
+				-- follow_current_file = true,
+				-- use_libuv_file_watcher = true,
 				follow_current_file = true,
-				use_libuv_file_watcher = true,
+				group_empty_dirs = false,
+				hijack_netrw_behavior = "open_default",
 			},
-      close_if_last_window = true,
+			close_if_last_window = true,
 			window = {
 				mappings = {
 					["<space>"] = "none",
-          ["o"] = "open",
+					["o"] = "open",
 				},
 			},
 			default_component_configs = {
@@ -63,7 +66,7 @@ return {
 		},
 		config = function(_, opts)
 			require("neo-tree").setup(opts)
-      vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { fg = "#4B4453", bg = "#EABDFF" })
+			vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { fg = "#4B4453", bg = "#EABDFF" })
 			vim.api.nvim_create_autocmd("TermClose", {
 				pattern = "*lazygit",
 				callback = function()

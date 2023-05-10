@@ -193,9 +193,27 @@ return {
 		keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
 		opts = {
 			ensure_installed = {
+				"clangd",
+				"lua-language-server",
+				"pyright",
 				"stylua",
+				"prettier",
 				"shfmt",
-				-- "flake8",
+				"codelldb",
+				"rust-analyzer",
+				"taplo",
+				"gopls",
+				"css-lsp",
+				"eslint-lsp",
+				"html-lsp",
+				"typescript-language-server",
+			},
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "",
+					package_uninstalled = "✗",
+				},
 			},
 		},
 		---@param opts MasonSettings | {ensure_installed: string[]}

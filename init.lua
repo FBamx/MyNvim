@@ -24,6 +24,3 @@ require("lazy").setup("plugins")
 
 -- colorscheme
 vim.cmd([[colorscheme catppuccin]])
-
--- format on save
--- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])

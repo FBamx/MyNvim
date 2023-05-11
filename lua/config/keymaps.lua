@@ -75,3 +75,6 @@ end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
 	Util.float_term({ "lazygit" }, { esc_esc = false })
 end, { desc = "Lazygit (cwd)" })
+
+-- toglle format
+map("n", "<leader>uf", require("plugins.lsp.format").toggle, { desc = "Toggle format on Save" })

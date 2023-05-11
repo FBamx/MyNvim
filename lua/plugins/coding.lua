@@ -164,4 +164,48 @@ return {
 			end
 		end,
 	},
+
+	-- ufo
+	{
+		"kevinhwang91/nvim-ufo",
+		lazy = false,
+		dependencies = {
+			"kevinhwang91/promise-async",
+			{
+				"luukvbaal/statuscol.nvim",
+				lazy = false,
+				config = function()
+					local builtin = require("statuscol.builtin")
+					require("statuscol").setup({
+						segments = {
+							{
+								text = { builtin.lnumfunc, " " },
+								condition = { true, builtin.not_empty },
+								click = "v:lua.ScLa",
+							},
+							{ text = { builtin.foldfunc, " " }, click = "v:lua.ScFa" },
+							{ text = { "%s" }, click = "v:lua.ScSa" },
+						},
+					})
+				end,
+			},
+		},
+		opts = {
+			provider_selector = function(bufnr, filetype, buftype)
+				return { "treesitter", "indent" }
+			end,
+			open_fold_hl_timeout = 400,
+			close_fold_kinds = { "imports", "comment" },
+			preview = {
+				win_config = {
+					border = { "", "─", "", "", "", "─", "", "" },
+					-- winhighlight = "Normal:Folded",
+					winblend = 0,
+				},
+			},
+		},
+		config = function(_, opts)
+			require("ufo").setup(opts)
+		end,
+	},
 }

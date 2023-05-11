@@ -207,6 +207,7 @@ return {
 				"eslint-lsp",
 				"html-lsp",
 				"typescript-language-server",
+				"yaml-language-server",
 			},
 			ui = {
 				icons = {

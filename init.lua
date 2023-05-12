@@ -1,3 +1,4 @@
+-- test
 local echo = function(str)
 	vim.cmd("redraw")
 	vim.api.nvim_echo({ { str, "Bold" } }, true, {})

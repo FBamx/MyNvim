@@ -9,6 +9,9 @@ map("n", "<Esc>", ":nohl<CR>")
 -- lazy
 map("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy" })
 
+-- Quit
+map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+
 -- local history
 map("n", "<A-h>", ":LocalHistoryToggle<CR>")
 

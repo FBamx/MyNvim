@@ -23,7 +23,7 @@ require("config.options")
 require("lazy").setup("plugins")
 
 -- colorscheme
-vim.cmd([[colorscheme catppuccin]])
+vim.cmd([[colorscheme synthwave84]])
 
 -- ufo
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]

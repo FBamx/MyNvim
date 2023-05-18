@@ -91,4 +91,22 @@ return {
 			transparent_bg = true,
 		},
 	},
+
+	-- synthwave84
+	{
+		"lunarvim/synthwave84.nvim",
+		opts = {
+			glow = {
+				error_msg = true,
+				type2 = true,
+				func = true,
+				keyword = true,
+				operator = false,
+				buffer_current_target = true,
+				buffer_visible_target = true,
+				buffer_inactive_target = true,
+			},
+			transparent = true,
+		},
+	},
 }

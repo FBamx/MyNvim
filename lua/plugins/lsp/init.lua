@@ -187,7 +187,6 @@ return {
 			ensure_installed = {
 				"clangd",
 				"lua-language-server",
-				"java-language-server",
 				"pyright",
 				"stylua",
 				"prettier",

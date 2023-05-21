@@ -171,7 +171,8 @@ return {
 					nls.builtins.diagnostics.fish,
 					nls.builtins.formatting.stylua,
 					nls.builtins.formatting.shfmt,
-					-- nls.builtins.diagnostics.flake8,
+					nls.builtins.formatting.black,
+					nls.builtins.formatting.clang - format,
 				},
 			}
 		end,
@@ -186,6 +187,8 @@ return {
 		opts = {
 			ensure_installed = {
 				"clangd",
+				"clang-format",
+				"black",
 				"lua-language-server",
 				"pyright",
 				"stylua",

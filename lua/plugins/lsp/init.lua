@@ -172,7 +172,8 @@ return {
 					nls.builtins.formatting.stylua,
 					nls.builtins.formatting.shfmt,
 					nls.builtins.formatting.black,
-					nls.builtins.formatting.clang - format,
+					nls.builtins.formatting.clang,
+					nls.builtins.formatting.prettier,
 				},
 			}
 		end,
@@ -180,7 +181,6 @@ return {
 
 	-- cmdline tools and lsp servers
 	{
-
 		"williamboman/mason.nvim",
 		cmd = "Mason",
 		keys = { { "<leader>ma", "<cmd>Mason<cr>", desc = "Mason" } },
@@ -193,6 +193,7 @@ return {
 				"pyright",
 				"stylua",
 				"prettier",
+				"deno",
 				"shfmt",
 				"codelldb",
 				"rust-analyzer",

@@ -192,7 +192,7 @@ return {
 				"pyright",
 				"stylua",
 				"prettier",
-				"deno",
+				-- "deno",
 				"shfmt",
 				"codelldb",
 				"rust-analyzer",

@@ -10,6 +10,11 @@ return {
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "hrsh7th/cmp-emoji" },
 			{ "onsails/lspkind.nvim" },
+			{
+				"Saecki/crates.nvim",
+				event = { "BufRead Cargo.toml" },
+				config = true,
+			},
 		},
 		opts = function()
 			local cmp = require("cmp")
@@ -57,6 +62,7 @@ return {
 					{ name = "luasnip" },
 					{ name = "buffer" },
 					{ name = "path" },
+					{ name = "crates" },
 					-- { name = "cmp_tabnine" },
 				}),
 				window = {

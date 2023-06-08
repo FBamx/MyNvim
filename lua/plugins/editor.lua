@@ -72,6 +72,12 @@ return {
 		dependencies = {
 			"kevinhwang91/promise-async",
 		},
+		init = function()
+			vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+			vim.o.foldcolumn = "1"
+			vim.o.foldlevelstart = 99
+			vim.o.foldenable = true
+		end,
 		config = function()
 			vim.o.foldcolumn = "1"
 			vim.o.foldlevel = 99
@@ -346,7 +352,6 @@ return {
     },
 	},
 
-
 	-- comments
 	{ "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
 	{
@@ -363,5 +368,4 @@ return {
 			require("mini.comment").setup(opts)
 		end,
 	},
-
 }
